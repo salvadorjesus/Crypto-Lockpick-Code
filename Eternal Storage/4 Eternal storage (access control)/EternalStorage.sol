@@ -20,9 +20,9 @@ contract EternalStorage {
     }
 
     // Owner function to upgrade the authorizedContract
-    function updateClientContract(address _newContract) public {
+    function setAuthorizedContract(address newContract) public {
         require(msg.sender == owner, "You are not the owner.");
-        authorizedContract = _newContract;
+        authorizedContract = newContract;
     }
 
     // Getter functions
