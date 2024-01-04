@@ -3,14 +3,14 @@ pragma solidity ^0.8.0;
 
 import "../EternalStorage.sol";
 
+struct FavoritePlace {
+    string name;
+    string typeOfSite;
+    bool isFree;
+}
+
 contract MyFavoriteCityV3 {
     EternalStorage public storageContract;
-
-    struct FavoritePlace {
-        string name;
-        string typeOfSite;
-        bool isFree;
-    }
 
     constructor(address eternalStorageAddress) {
         storageContract = EternalStorage(eternalStorageAddress);
