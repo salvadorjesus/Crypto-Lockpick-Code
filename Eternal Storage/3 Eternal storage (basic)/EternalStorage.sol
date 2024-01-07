@@ -9,51 +9,51 @@ contract EternalStorage {
     mapping(bytes32 => bytes) private bytesStorage;
     mapping(bytes32 => string) private stringStorage;
 
-    function getUIntValue(bytes32 record) public view returns (uint256) {
-        return uintStorage[record];
+    function getUIntValue(bytes32 key) public view returns (uint256) {
+        return uintStorage[key];
     }
 
-    function setUIntValue(bytes32 record, uint256 value) public {
-        uintStorage[record] = value;
+    function setUIntValue(bytes32 key, uint256 value) public {
+        uintStorage[key] = value;
     }
 
-    function getIntValue(bytes32 record) public view returns (int256) {
-        return intStorage[record];
+    function getIntValue(bytes32 key) public view returns (int256) {
+        return intStorage[key];
     }
 
-    function setIntValue(bytes32 record, int256 value) public {
-        intStorage[record] = value;
+    function setIntValue(bytes32 key, int256 value) public {
+        intStorage[key] = value;
     }
 
-    function getAddressValue(bytes32 record) public view returns (address) {
-        return addressStorage[record];
+    function getAddressValue(bytes32 key) public view returns (address) {
+        return addressStorage[key];
     }
 
-    function setAddressValue(bytes32 record, address value) public {
-        addressStorage[record] = value;
+    function setAddressValue(bytes32 key, address value) public {
+        addressStorage[key] = value;
     }
 
-    function getBoolValue(bytes32 record) public view returns (bool) {
-        return boolStorage[record];
+    function getBoolValue(bytes32 key) public view returns (bool) {
+        return boolStorage[key];
     }
 
-    function setBoolValue(bytes32 record, bool value) public {
-        boolStorage[record] = value;
+    function setBoolValue(bytes32 key, bool value) public {
+        boolStorage[key] = value;
     }
 
-    function getBytesValue(bytes32 record) public view returns (bytes memory) {
-        return bytesStorage[record];
+    function getBytesValue(bytes32 key) public view returns (bytes memory) {
+        return bytesStorage[key];
     }
 
-    function setBytesValue(bytes32 record, bytes memory value) public {
-        bytesStorage[record] = value;
+    function setBytesValue(bytes32 key, bytes memory value) public {
+        bytesStorage[key] = value;
     }
 
-    function getStringValue(bytes32 record) public view returns (string memory) {
-        return stringStorage[record];
+    function getStringValue(bytes32 key) public view returns (string memory) {
+        return stringStorage[key];
     }
 
-    function setStringValue(bytes32 record, string memory value) public {
-        stringStorage[record] = value;
+    function setStringValue(bytes32 key, string memory value) public {
+        stringStorage[key] = value;
     }
 }

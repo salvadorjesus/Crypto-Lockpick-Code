@@ -26,52 +26,52 @@ contract EternalStorage {
     }
 
     // Getter functions
-    function getUIntValue(bytes32 record) external view returns (uint256) {
-        return uintStorage[record];
+    function getUIntValue(bytes32 key) external view returns (uint256) {
+        return uintStorage[key];
     }
 
-    function getIntValue(bytes32 record) external view returns (int256) {
-        return intStorage[record];
+    function getIntValue(bytes32 key) external view returns (int256) {
+        return intStorage[key];
     }
 
-    function getAddressValue(bytes32 record) external view returns (address) {
-        return addressStorage[record];
+    function getAddressValue(bytes32 key) external view returns (address) {
+        return addressStorage[key];
     }
 
-    function getBoolValue(bytes32 record) external view returns (bool) {
-        return boolStorage[record];
+    function getBoolValue(bytes32 key) external view returns (bool) {
+        return boolStorage[key];
     }
 
-    function getBytesValue(bytes32 record) external view returns (bytes memory) {
-        return bytesStorage[record];
+    function getBytesValue(bytes32 key) external view returns (bytes memory) {
+        return bytesStorage[key];
     }
 
-    function getStringValue(bytes32 record) external view returns (string memory) {
-        return stringStorage[record];
+    function getStringValue(bytes32 key) external view returns (string memory) {
+        return stringStorage[key];
     }
 
     // Setter functions with onlyAuthorizedContract modifier
-    function setUIntValue(bytes32 record, uint256 value) external onlyAuthorizedContract {
-        uintStorage[record] = value;
+    function setUIntValue(bytes32 key, uint256 value) external onlyAuthorizedContract {
+        uintStorage[key] = value;
     }
 
-    function setIntValue(bytes32 record, int256 value) external onlyAuthorizedContract {
-        intStorage[record] = value;
+    function setIntValue(bytes32 key, int256 value) external onlyAuthorizedContract {
+        intStorage[key] = value;
     }
 
-    function setAddressValue(bytes32 record, address value) external onlyAuthorizedContract {
-        addressStorage[record] = value;
+    function setAddressValue(bytes32 key, address value) external onlyAuthorizedContract {
+        addressStorage[key] = value;
     }
 
-    function setBoolValue(bytes32 record, bool value) external onlyAuthorizedContract {
-        boolStorage[record] = value;
+    function setBoolValue(bytes32 key, bool value) external onlyAuthorizedContract {
+        boolStorage[key] = value;
     }
 
-    function setBytesValue(bytes32 record, bytes memory value) external onlyAuthorizedContract {
-        bytesStorage[record] = value;
+    function setBytesValue(bytes32 key, bytes memory value) external onlyAuthorizedContract {
+        bytesStorage[key] = value;
     }
 
-    function setStringValue(bytes32 record, string memory value) external onlyAuthorizedContract {
-        stringStorage[record] = value;
+    function setStringValue(bytes32 key, string memory value) external onlyAuthorizedContract {
+        stringStorage[key] = value;
     }
 }
